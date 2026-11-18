@@ -157,7 +157,7 @@ def main():
         except Exception:
             raise
     elif "py2exe" in sys.argv:
-        from distutils.core import setup
+        from setuptools import setup
         from pyafipws.nsis import build_installer, Target
         import py2exe
         import glob
@@ -202,7 +202,7 @@ def main():
                         "pywin.dialogs",
                         "pywin.dialogs.list",
                         "win32ui",
-                        "distutils.core",
+                        "setuptools",
                         "py2exe",
                         "nsis",
                     ],
